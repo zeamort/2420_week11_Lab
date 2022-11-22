@@ -1,0 +1,9 @@
+#!/bin/bash
+# Author: Morteza Rahimi & Caleb Seeman
+# Date: November 20, 2022
+
+source ./filesToBackup.conf
+
+rsync -aPv -e "ssh -i $HOME/.ssh/DO2_key" $backupDirectories morteza@${backupIP}:/home/morteza/backupDirectory
+
+exit 0

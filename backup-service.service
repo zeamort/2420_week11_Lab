@@ -1,0 +1,9 @@
+[Unit]
+Description=This service will execute our backup-script shell script.
+
+[Service]
+Type=oneshot
+ExecStart=/opt/backup/backup-script
+
+[Install]
+WantedBy=multi-user.target

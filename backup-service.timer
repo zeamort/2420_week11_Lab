@@ -1,0 +1,10 @@
+[Unit]
+Description=Run backup-script.sh every Friday at 1AM.
+
+[Timer]
+OnCalendar=Fri 01:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
